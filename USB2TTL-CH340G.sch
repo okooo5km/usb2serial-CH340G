@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ch340g
+LIBS:USB2TTL-CH340G-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -36,9 +37,9 @@ encoding utf-8
 Sheet 1 1
 Title "USB2TTL-CH340G"
 Date "2016-06-03"
-Rev "v0.1"
-Comp ""
-Comment1 ""
+Rev "v0.2"
+Comp "SMSLIT"
+Comment1 "Author: 5km"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -60,7 +61,7 @@ U 1 1 57500D41
 P 3300 2850
 F 0 "C1" H 3325 2950 50  0000 L CNN
 F 1 "10uF" H 3325 2750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3338 2700 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 3338 2700 50  0001 C CNN
 F 3 "" H 3300 2850 50  0000 C CNN
 	1    3300 2850
 	1    0    0    -1  
@@ -71,7 +72,7 @@ U 1 1 57500D89
 P 4750 2850
 F 0 "C4" H 4775 2950 50  0000 L CNN
 F 1 "10uF" H 4775 2750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4788 2700 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 4788 2700 50  0001 C CNN
 F 3 "" H 4750 2850 50  0000 C CNN
 	1    4750 2850
 	1    0    0    -1  
@@ -82,7 +83,7 @@ U 1 1 57500DBB
 P 3700 2850
 F 0 "C2" H 3725 2950 50  0000 L CNN
 F 1 "0.1uF" H 3725 2750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3738 2700 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 3738 2700 50  0001 C CNN
 F 3 "" H 3700 2850 50  0000 C CNN
 	1    3700 2850
 	1    0    0    -1  
@@ -92,7 +93,7 @@ L R R3
 U 1 1 57500E03
 P 4050 2600
 F 0 "R3" V 4130 2600 50  0000 C CNN
-F 1 "220" V 4050 2600 50  0000 C CNN
+F 1 "100" V 4050 2600 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 3980 2600 50  0001 C CNN
 F 3 "" H 4050 2600 50  0000 C CNN
 	1    4050 2600
@@ -137,7 +138,7 @@ U 1 1 57500FCD
 P 4400 4500
 F 0 "C3" H 4425 4600 50  0000 L CNN
 F 1 "0.1uF" H 4425 4400 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4438 4350 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 4438 4350 50  0001 C CNN
 F 3 "" H 4400 4500 50  0000 C CNN
 	1    4400 4500
 	1    0    0    -1  
@@ -225,7 +226,7 @@ U 1 1 57501211
 P 6400 5450
 F 0 "C5" H 6425 5550 50  0000 L CNN
 F 1 "22pF" H 6425 5350 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6438 5300 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 6438 5300 50  0001 C CNN
 F 3 "" H 6400 5450 50  0000 C CNN
 	1    6400 5450
 	1    0    0    -1  
@@ -236,7 +237,7 @@ U 1 1 57501276
 P 7150 5450
 F 0 "C6" H 7175 5550 50  0000 L CNN
 F 1 "22pF" H 7175 5350 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7188 5300 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 7188 5300 50  0001 C CNN
 F 3 "" H 7150 5450 50  0000 C CNN
 	1    7150 5450
 	1    0    0    -1  
@@ -290,8 +291,6 @@ NoConn ~ 8300 4500
 NoConn ~ 8300 4700
 NoConn ~ 8300 4800
 NoConn ~ 8300 4900
-Text Label 6700 4600 0    60   ~ 0
-CH340G_3V3
 Text Label 7100 4500 0    60   ~ 0
 RXD
 Text Label 7100 4400 0    60   ~ 0
@@ -413,15 +412,13 @@ F 3 "" H 6950 3650 50  0000 C CNN
 	1    6950 3650
 	-1   0    0    1   
 $EndComp
-Text Label 7850 3650 2    60   ~ 0
-CH340G_3V3
 $Comp
 L CRYSTAL_SMD X1
 U 1 1 5750E302
 P 6800 5150
 F 0 "X1" H 6800 5240 50  0000 C CNN
 F 1 "CRYSTAL_SMD" H 6830 5040 50  0000 L CNN
-F 2 "Crystals:Resonator_3.2x1.5mm" H 6800 5150 50  0001 C CNN
+F 2 "myFootprints:Resonator_3.2x1.5mm" H 6800 5150 50  0001 C CNN
 F 3 "" H 6800 5150 50  0000 C CNN
 	1    6800 5150
 	1    0    0    -1  
@@ -432,7 +429,7 @@ U 1 1 5750F0F3
 P 5700 4700
 F 0 "P2" H 6025 4575 50  0000 C CNN
 F 1 "USB_OTG" H 5700 4900 50  0000 C CNN
-F 2 "Connect:USB_Micro-B" V 5650 4600 50  0001 C CNN
+F 2 "myFootprints:USB_Micro-B-MK5" V 5650 4600 50  0001 C CNN
 F 3 "" V 5650 4600 50  0000 C CNN
 	1    5700 4700
 	0    -1   -1   0   
@@ -499,8 +496,6 @@ Wire Wire Line
 Wire Wire Line
 	6000 4700 7300 4700
 Wire Wire Line
-	6700 4600 7300 4600
-Wire Wire Line
 	7300 4500 7100 4500
 Wire Wire Line
 	7300 4400 7100 4400
@@ -541,8 +536,6 @@ Wire Wire Line
 Wire Wire Line
 	5700 2650 5700 2900
 Wire Wire Line
-	7150 3650 7850 3650
-Wire Wire Line
 	6400 5150 6600 5150
 Wire Wire Line
 	7000 5150 7150 5150
@@ -556,7 +549,7 @@ Connection ~ 6800 5650
 Wire Wire Line
 	6250 4500 6250 4300
 Wire Wire Line
-	6000 4500 6250 4500
+	6000 4500 6500 4500
 Text GLabel 3300 2500 1    60   Input ~ 0
 +5V
 Wire Wire Line
@@ -581,4 +574,28 @@ Wire Wire Line
 	3350 4200 3350 4350
 Text GLabel 3350 4200 1    60   Input ~ 0
 +5V
+Wire Wire Line
+	6950 4600 7300 4600
+$Comp
+L C C7
+U 1 1 575D2FE6
+P 6650 4500
+F 0 "C7" V 6550 4350 50  0000 L CNN
+F 1 "0.01uF" V 6800 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6688 4350 50  0001 C CNN
+F 3 "" H 6650 4500 50  0000 C CNN
+	1    6650 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 4600 6950 4500
+Wire Wire Line
+	6950 4500 6800 4500
+Connection ~ 6250 4500
+Wire Wire Line
+	7150 3650 7550 3650
+Text Label 7550 3650 2    60   ~ 0
+VCC
+Text Label 8450 4300 2    60   ~ 0
+VCC
 $EndSCHEMATC
