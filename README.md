@@ -20,3 +20,7 @@
 #### PCB的3D预览
 
 ![sch](img/preview.png)
+
+#### 附：
+
+[CH340](http://www.wch.cn/product/CH340.html) 是一个 USB 总线的转接芯片,实现 USB 转串口、USB 转 IrDA 红外或者 USB 转打印口，其中设计中采用的CH340G是一款只有USB转串口功能的芯片。
