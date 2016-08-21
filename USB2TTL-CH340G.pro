@@ -1,4 +1,4 @@
-update=2016 June 02, Thursday 23:07:00
+update=Sunday, 21 August 2016 'pmt' 13:34:12
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=library/ch340g
+LibName31=library/myRegul

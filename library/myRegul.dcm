@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP XC6206P332MR
+D 500mA Low drop-out regulator, Fixed Output 3.3V, SOT23
+K REGULATOR LDO 3.3V
+$ENDCMP
+#
+#End Doc Library
